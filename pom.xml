@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.springframework</groupId>
-    <artifactId>spring-twitter-stream</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>tweet-covid-19</artifactId>
+    <packaging>war</packaging>
     <version>0.1.0</version>
 
     <parent>
@@ -73,7 +73,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <properties>
