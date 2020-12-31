@@ -2,7 +2,7 @@
 
 Par [Vincent ETHEVE](mailto:vincent.etheve@edu.ece.fr) & [Quentin BENOIST](mailto:quentin.benoist@edu.ece.fr)
 
-Ce projet est application web qui permet de streamer en direct les #HashTags et la localisation d'un Tweets.
+Ce projet est une application web qui permet de streamer en direct les Tweet et sa localisation du Tweet comprenant le #HashTag (ici 'covid').
 
 Le but de ce projet a donc été de construire une architecture distribuée, conteneurisée autour de cette application pour la rendre plus facile d'utilisation pour le développement, le test, le déploiement et la gestion globale d'application.
 
