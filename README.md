@@ -43,7 +43,7 @@ $ git clone https://github.com/Milkad0/TweetCovid19.git
 $ cd ./TweetCovid19
 ```
 
-#### Récupère l'image depuis le docker hub
+#### Récupérer l'image depuis le docker hub
 ```bash
 $ docker pull 0wens/tweetcovid-repo:v1
 ```
