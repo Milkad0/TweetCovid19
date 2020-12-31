@@ -2,24 +2,28 @@
 
 Par [Vincent ETHEVE](mailto:vincent.etheve@edu.ece.fr) & [Quentin BENOIST](mailto:quentin.benoist@edu.ece.fr)
 
-Ce projet est une application web qui permet de streamer en direct les Tweet et sa localisation du Tweet comprenant le #HashTag (ici 'covid').
+Ce projet est une application web qui permet de streamer en direct les Tweet et sa localisation du Tweet comprenant un mot spécifique (ici 'covid').
 
 Le but de ce projet a donc été de construire une architecture distribuée, conteneurisée autour de cette application pour la rendre plus facile d'utilisation pour le développement, le test, le déploiement et la gestion globale d'application.
 
 Une fois l'application developpée nous l'avons dockerisé et nous avons push l'image de cette application sur notre [Docker Hub](https://hub.docker.com/repository/docker/0wens/repository).
 
+Nous avons mis en place Travis-CI qui est un service en ligne utilisé pour compiler, tester et déployer le code source de l'application développée. 
+
+
 ## Demo - Live Demo 
 [Lien demo](https://tweetcovidheroku.herokuapp.com/)
+Attendre quelques secondes pour que l'application démarre.
+
 
 ## Prérequis
-
 1. [Git](https://git-scm.com/book/fr/v2/Démarrage-rapide-Installation-de-Git)
 2. [Docker](https://docs.docker.com/get-docker/)
+
 
 ## Installation
 
 #### Créer un dossier pour le projet et s'y placer
-
 ```bash
 $ mkdir TweetCovid19
 $ cd ./TweetCovid19
@@ -29,6 +33,7 @@ $ cd ./TweetCovid19
 ```bash
 $ git clone https://github.com/Milkad0/TweetCovid19.git
 ```
+
 
 ## Utilisation
 
@@ -53,7 +58,6 @@ $ docker run -p 8080:8080 0wens/tweetcovid-repo:v1
 ## Deploiement sur Heroku
 
 #### Prérequis
-
 1. Compte gratuit - [Heroku] https://www.heroku.com.
 2. Heroku cli - [Heroku CLI] https://devcenter.heroku.com/articles/heroku-cli
 
