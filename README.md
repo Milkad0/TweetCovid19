@@ -2,7 +2,7 @@
 
 Par [Vincent ETHEVE](mailto:vincent.etheve@edu.ece.fr) & [Quentin BENOIST](mailto:quentin.benoist@edu.ece.fr)
 
-Ce projet est une application web qui permet de streamer en direct les Tweet et sa localisation du Tweet comprenant un mot spécifique (ici 'covid').
+Ce projet est une application web qui permet de streamer en direct les Tweet comprenant un mot spécifique (ici 'covid').
 
 Le but de ce projet a donc été de construire une architecture distribuée, conteneurisée autour de cette application pour la rendre plus facile d'utilisation pour le développement, le test, le déploiement et la gestion globale d'application.
 
@@ -10,9 +10,10 @@ Une fois l'application developpée nous l'avons dockerisé et nous avons push l'
 
 Nous avons mis en place Travis-CI qui est un service en ligne utilisé pour compiler, tester et déployer le code source de l'application développée. 
 
+Enfin nous avons déployé l'application sur Heroku.
 
 ## Demo - Live Demo 
-[Lien demo](https://tweetcovidheroku.herokuapp.com/)
+[Lien demo](https://tweetcovid19.herokuapp.com/)
 Attendre quelques secondes pour que l'application démarre.
 
 
