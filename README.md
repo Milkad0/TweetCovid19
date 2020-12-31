@@ -8,7 +8,7 @@ Ce projet est une application web qui permet de streamer en direct les Tweet com
 
 Le but de ce projet a donc été de construire une architecture distribuée, conteneurisée autour de cette application pour la rendre plus facile d'utilisation pour le développement, le test, le déploiement et la gestion globale d'application.
 
-Une fois l'application developpée nous l'avons dockerisé et nous avons push l'image de cette application sur notre [Docker Hub](https://hub.docker.com/repository/docker/0wens/repository).
+Une fois l'application developpée nous l'avons dockerisé et nous avons push l'image de cette application sur notre [Docker Hub](https://hub.docker.com/r/0wens/tweetcovid19-repo).
 
 Nous avons mis en place Travis-CI qui est un service en ligne utilisé pour compiler, tester et déployer le code source de l'application développée. 
 
@@ -47,12 +47,12 @@ $ cd ./TweetCovid19
 
 #### Récupérer l'image depuis le docker hub
 ```bash
-$ docker pull 0wens/tweetcovid-repo:v1
+$ docker pull 0wens/tweetcovid19-repo:v1
 ```
 
 #### Lancer le container
 ```bash
-$ docker run -p 8080:8080 0wens/tweetcovid-repo:v1
+$ docker run -p 8080:8080 0wens/tweetcovid19-repo:v1
 ```
 
 #### Une fois le container lancé, l'interface est accessible depuis l'adresse suivante: http://localhost:8080/
