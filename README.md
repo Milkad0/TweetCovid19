@@ -14,7 +14,7 @@ Nous avons mis en place Travis-CI qui est un service en ligne utilisé pour comp
 
 Enfin nous avons déployé l'application sur Heroku.
 
-## Demo - Live Demo 
+## Heroku - Live Demo 
 [Lien demo](https://tweetcovid19.herokuapp.com/)
 Attendre quelques secondes pour que l'application démarre.
 
