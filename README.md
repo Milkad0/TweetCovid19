@@ -2,6 +2,8 @@
 
 Par [Vincent ETHEVE](mailto:vincent.etheve@edu.ece.fr) & [Quentin BENOIST](mailto:quentin.benoist@edu.ece.fr)
 
+![](img/recording.gif)
+
 Ce projet est une application web qui permet de streamer en direct les Tweet comprenant un mot spécifique (ici 'covid').
 
 Le but de ce projet a donc été de construire une architecture distribuée, conteneurisée autour de cette application pour la rendre plus facile d'utilisation pour le développement, le test, le déploiement et la gestion globale d'application.
