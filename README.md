@@ -6,6 +6,7 @@ Ce projet est [...]
 
 Le but de ce projet a donc été de construire une architecture distribuée, conteneurisée autour d'une application de [...]
 
+## Demo - Live Demo @ [Heroku] (https://tweetcovidheroku.herokuapp.com/)
 
 ## Explications
 
@@ -13,7 +14,7 @@ Pour réaliser ce projet nous avons d'abord [...]
 
 Enfin nous avons developpé un [...]
 
-Une fois ces applications developpées nous les avons dockerisés et avons push les images sur notre [Docker Hub](https://hub.docker.com/repository/docker/0wens/repository).
+Une fois l'application developpée nous l'avons dockerisé et nous avons push l'images sur notre [Docker Hub](https://hub.docker.com/repository/docker/0wens/repository).
 
 Puis pour finir nous avons réalisé un Dockerfile réalisant les actions suivantes :
 - Mise en place [...]
@@ -27,44 +28,44 @@ L'installation a été rendue le plus simple possible avec le Dockerfile, il n'y
 
 ## Installation
 
-####Créer un dossier pour le projet et s'y placer
+#### Créer un dossier pour le projet et s'y placer
 
 ```bash
 $ mkdir TweetCovid19
 $ cd ./TweetCovid19
 ```
 
-####Cloner le repository du projet
+#### Cloner le repository du projet
 ```bash
 $ git clone https://github.com/Milkad0/TweetCovid19.git
 ```
 
 ## Utilisation
 
-####Se placer dans le dossier du projet
+#### Se placer dans le dossier du projet
 ```bash
 $ cd ./TweetCovid19
 ```
 
-####Récupère l'image depuis le docker hub
+#### Récupère l'image depuis le docker hub
 ```bash
 $ docker pull 0wens/repository:1.0
 ```
 
-####Lancer le container
+#### Lancer le container
 ```bash
 $ docker run -p 8080:8080 0wens/repository:1.0
 ```
 
-####Une fois le container lancé, l'interface est accessible depuis l'adresse http://localhost:8080/
+#### Une fois le container lancé, l'interface est accessible depuis l'adresse http://localhost:8080/
 
 
 ## Deploiement sur Heroku
 
-#### Prérequis:
+#### Prérequis
 
-1. Compte gratuit - https://www.heroku.com.
-2. heroku cli est installé - https://devcenter.heroku.com/articles/heroku-cli
+1. Compte gratuit - [Heroku] https://www.heroku.com.
+2. Heroku cli - [Heroku CLI] https://devcenter.heroku.com/articles/heroku-cli
 
 #### Générer le package war de l'application (tweet-covid-19-0.1.0.war)
 ```sh
@@ -91,18 +92,18 @@ $ heroku create <"heroku-app-name">
 $ heroku war:deploy target/tweet-covid-19-0.1.0.war --app <"heroku-app-name">
 ```
 
-####Une fois le déploiement effectué, l'interface est accessible depuis l'adresse https://<"heroku-app-name">.herokuapp.com/
+#### Une fois le déploiement effectué, l'interface est accessible depuis l'adresse https://<"heroku-app-name">.herokuapp.com/
 
 
 ## Validation
 
-####Vérifier que le container est bien en cours d'execution sur le port 8080
+#### Vérifier que le container est bien en cours d'execution sur le port 8080
 ```bash
 $ docker container ls
 ```
 
-####Acceder à l'ihm local: http://localhost:8080/
+#### Acceder à l'ihm local: http://localhost:8080/
 Vérifier que les tweets défilent. La vitesse dépend du nombre de tweets en cours.
 
-####Acceder à l'ihm heroku: https://<"heroku-app-name">.herokuapp.com/
+#### Acceder à l'ihm heroku: https://<"heroku-app-name">.herokuapp.com/
 Vérifier que les tweets défilent. La vitesse dépend du nombre de tweets en cours.
