@@ -25,7 +25,7 @@ public class StreamController {
         return "events";
     }  
     
-    @RequestMapping("/tweetLocation")
+    @RequestMapping("/tweetStream")
     public SseEmitter streamTweets() throws InterruptedException{
     	
     	SseEmitter sseEmitter = new SseEmitter();

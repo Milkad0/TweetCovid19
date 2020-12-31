@@ -1,27 +1,15 @@
 #hashTags{
-    overflow-y:scroll;
+    overflow-y:hidden;
     overflow-x: hidden;
     position: absolute;
     height: 100%;
     width: 100%;
 }
 
-#hashTags::-webkit-scrollbar {
-    width: 10px;
-}
-
-#hashTags::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    -webkit-border-radius: 12px;
-    border-radius: 12px;
-}
-
-
 #hashTags::-webkit-scrollbar-thumb {
     -webkit-border-radius: 12px;
     border-radius: 12px;
     background: grey;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 body {
     background: white;

@@ -4,13 +4,14 @@ $(document).ready(function () {
 
     //Array to Store Streaming HashTags
     var hashTagsArr = ["Stream tweet related to COVID19"];
+    var dateArr = ["Please wait..."]
 
     var hashTagsAndProfile = [];
 
     var height = $(window).height(), width = $(window).width();
 
     try {
-        var streamLocation = new EventSource('/tweetLocation');
+        var streamLocation = new EventSource('/tweetStream');
 
 
         streamLocation.addEventListener('streamHashtags', function (event) {
@@ -18,10 +19,21 @@ $(document).ready(function () {
             var hashtags = event.data;
             if (hashtags !== '' && hashtags !== '""') {
                 hashTagsArr.push(hashtags);
-            }
-            ;
+            };
 
         });
+
+        streamLocation.addEventListener('streamDate', function (event) {
+
+            var date = event.data;
+            if (date !== '' && date !== '""') {
+                dateArr.push(date);
+            };
+
+        });
+
+
+
     }
     catch (err) {
         words = [];
@@ -30,39 +42,35 @@ $(document).ready(function () {
 
     $("#hashTags").height(height).width(width);
 
-    var lastClassindex = 0;
     showNewHashTags();
 
     function showNewHashTags() {
+        //var scrollHeight;
 
-        //Put Project Info in beetween hashtags
-        if (Math.floor(Math.random() * 20) === 10) {
-            var dispInfo = [];
-            hashTagsArr = hashTagsArr.concat(dispInfo);
-        }
+
 
         for (var i = 0; i < hashTagsArr.length; i++) {
 
-            $("#hashTags").append("<tr><td><b><p returnTextClass(lastClassindex + 2) > "
-                + hashTagsArr[i] + "</p></b></p></td></tr>");
-            lastClassindex++;
+            $("#hashTags").append("<tr><td style='color:green'><b><p> "
+            +dateArr[i] +"</td><td>"+ hashTagsArr[i] + "</p></b></p></td></tr>");
+
+           // scrollHeight = $('#hashTags').prop("scrollHeight")
+            $('#hashTags').animate({scrollTop: $('#hashTags').prop("scrollHeight")});
 
         }
-        $('#hashTags').animate({scrollTop: $('#hashTags').prop("scrollHeight")}, 2000);
-        lastClassindex = hashTagsArr.length;
+
+
+
+
 
         hashTagsArr = []; //Empty hashTag Array to free up array
+        dateArr = [];
 
         setTimeout(function () {
             showNewHashTags()
-        }, 2000);
 
-    }
+        }, 1000);
 
-    function returnTextClass(index) {
-        var cssClass = ["success", "info", "warning", "danger", "primary"];
-        var ind = index % 5;
-        return cssClass[ind];
     }
 
 
