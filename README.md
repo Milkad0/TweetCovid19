@@ -1,25 +1,15 @@
 # TweetCovid19
 
-Par [Vincent ETHEVE](mailto:vincent.etheve@edu.ece.fr), [Quentin BENOIST](mailto:quentin.benoist@edu.ece.fr)
+Par [Vincent ETHEVE](mailto:vincent.etheve@edu.ece.fr) & [Quentin BENOIST](mailto:quentin.benoist@edu.ece.fr)
 
-Ce projet est [...]
+Ce projet est application web qui permet de streamer en direct les #HashTags et la localisation d'un Tweets.
 
-Le but de ce projet a donc été de construire une architecture distribuée, conteneurisée autour d'une application de [...]
+Le but de ce projet a donc été de construire une architecture distribuée, conteneurisée autour de cette application pour la rendre plus facile d'utilisation pour le développement, le test, le déploiement et la gestion globale d'application.
 
-## Demo - Live Demo @ [Heroku] (https://tweetcovidheroku.herokuapp.com/)
+Une fois l'application developpée nous l'avons dockerisé et nous avons push l'image de cette application sur notre [Docker Hub](https://hub.docker.com/repository/docker/0wens/repository).
 
-## Explications
-
-Pour réaliser ce projet nous avons d'abord [...]
-
-Enfin nous avons developpé un [...]
-
-Une fois l'application developpée nous l'avons dockerisé et nous avons push l'images sur notre [Docker Hub](https://hub.docker.com/repository/docker/0wens/repository).
-
-Puis pour finir nous avons réalisé un Dockerfile réalisant les actions suivantes :
-- Mise en place [...]
-
-L'installation a été rendue le plus simple possible avec le Dockerfile, il n'y a rien à initialiser, seulement à clone ce dépôt github et lancer le container docker.
+## Demo - Live Demo 
+[Lien demo](https://tweetcovidheroku.herokuapp.com/)
 
 ## Prérequis
 
@@ -49,15 +39,15 @@ $ cd ./TweetCovid19
 
 #### Récupère l'image depuis le docker hub
 ```bash
-$ docker pull 0wens/repository:1.0
+$ docker pull 0wens/tweetcovid-repo:v1
 ```
 
 #### Lancer le container
 ```bash
-$ docker run -p 8080:8080 0wens/repository:1.0
+$ docker run -p 8080:8080 0wens/tweetcovid-repo:v1
 ```
 
-#### Une fois le container lancé, l'interface est accessible depuis l'adresse http://localhost:8080/
+#### Une fois le container lancé, l'interface est accessible depuis l'adresse suivante: http://localhost:8080/
 
 
 ## Deploiement sur Heroku
